@@ -25,10 +25,6 @@ git clone --depth 1 https://github.com/fw876/helloworld package/helloworld
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-adguardhome package/luci-app-adguardhome
 svn_export "main" "luci-app-passwall" "package/luci-app-passwall" "https://github.com/xiaorouji/openwrt-passwall"
 
-rm -rf package/helloworld/shadowsocksr-libev
-rm -rf package/openwrt-passwall-packages/shadowsocksr-libev
-svn_export "v5" "shadowsocksr-libev" "package/shadowsocksr-libev" "https://github.com/sbwml/openwrt_helloworld"
-
 # turboacc 补丁
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
