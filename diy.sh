@@ -26,10 +26,11 @@ git clone --depth 1 https://github.com/chenmozhijin/luci-app-adguardhome package
 svn_export "main" "luci-app-passwall" "package/luci-app-passwall" "https://github.com/xiaorouji/openwrt-passwall"
 
 # hwnat
-svn_export "master" "target/linux/ramips" "target/linux/ramips" "https://github.com/padavanonly/immortalwrt"
+curl -sfL https://github.com/padavanonly/openwrt/raw/master/target/linux/ramips/dts/mt7621_xiaomi_mi-router-3g.dts > /target/linux/ramips/dts/mt7621_xiaomi_mi-router-3g.dts
+curl -sfL https://github.com/padavanonly/openwrt/raw/master/target/linux/ramips/mt7621/base-files/etc/board.d/02_network > /target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 
 # turboacc 补丁
-curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+#curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
 # 安装插件
 ./scripts/feeds update -l
