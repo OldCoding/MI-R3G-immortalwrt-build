@@ -15,7 +15,7 @@ svn_export() {
 #rm -rf feeds/packages/lang/golang 
 #git clone https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 rm -rf ./feeds/luci/applications/luci-app-passwall
-rm -rf target/linux/ramips
+
 curl -sfL https://github.com/immortalwrt/luci/raw/master/modules/luci-base/root/usr/share/luci/menu.d/luci-base.json > feeds/luci/modules/luci-base/root/usr/share/luci/menu.d/luci-base.json
 
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
