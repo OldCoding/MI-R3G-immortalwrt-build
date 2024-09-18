@@ -40,10 +40,10 @@ sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_genera
 sed -i 's/ImmortalWrt/MI-R3G/' package/base-files/files/bin/config_generate
 # DNS劫持
 sed -i '/dns_redirect/d' package/network/services/dnsmasq/files/dhcp.conf
-# 汉化
 cd package
+# 汉化
 curl -sfL -o ./convert_translation.sh https://github.com/kenzok8/small-package/raw/main/.github/diy/convert_translation.sh
-chmod +x ./convert_translation.sh && bash ./convert_translation.sh
+chmod +x ./convert_translation.sh && bash -v ./convert_translation.sh
 # 更新passwall规则
 curl -sfL -o ./luci-app-passwall/root/usr/share/passwall/rules/gfwlist https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt
 
