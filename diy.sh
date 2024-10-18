@@ -21,6 +21,7 @@ rm -rf ./feeds/luci/applications/luci-app-smartdns
 rm -rf ./feeds/luci/applications/luci-app-argon-config
 rm -rf ./feeds/luci/themes/luci-theme-argon
 rm -rf ./feeds/packages/net/smartdns
+rm -rf ./feeds/packages/net/xray-core
 
 git clone --depth 1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 git clone --depth 1 https://github.com/pymumu/openwrt-smartdns package/smartdns
