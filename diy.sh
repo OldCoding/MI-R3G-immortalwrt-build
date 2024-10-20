@@ -38,7 +38,7 @@ svn_export "main" "luci-app-passwall" "package/luci-app-passwall" "https://githu
 # curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
 # 安装插件
-./scripts/feeds update -l
+./scripts/feeds update -i
 ./scripts/feeds install -a
 
 # 个性化设置
