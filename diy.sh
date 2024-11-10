@@ -20,6 +20,8 @@ rm -rf ./feeds/luci/applications/luci-app-ssr-*
 rm -rf ./feeds/luci/applications/luci-app-smartdns
 rm -rf ./feeds/luci/applications/luci-app-argon-config
 rm -rf ./feeds/luci/themes/luci-theme-argon
+rm -rf ./feeds/luci/applications/luci-app-alist
+rm -rf ./feeds/packages/net/alist
 rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/packages/net/xray-core
 
@@ -35,9 +37,11 @@ git clone --depth 1 https://github.com/OldCoding/luci-app-filebrowser package/lu
 git clone --depth 1 https://github.com/hudra0/luci-app-qosmate package/luci-app-qosmate
 git clone --depth 1 https://github.com/hudra0/qosmate package/qosmate
 svn_export "main" "luci-app-passwall" "package/luci-app-passwall" "https://github.com/xiaorouji/openwrt-passwall"
+svn_export "main" "luci-app-alist" "feeds/luci/applications/luci-app-alist" "https://github.com/sbwml/luci-app-alist"
+svn_export "main" "alist" "feeds/packages/net/alist" "https://github.com/sbwml/luci-app-alist"
 
 # turboacc 补丁
-# curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
 # 安装插件
 ./scripts/feeds update -i
