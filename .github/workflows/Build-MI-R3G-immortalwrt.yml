@@ -154,7 +154,6 @@ jobs:
         # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client is not set
         # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server is not set
         CONFIG_PACKAGE_luci-app-webadmin=y
-        CONFIG_PACKAGE_luci-app-watchcat=y
         CONFIG_PACKAGE_luci-app-wol=y
         CONFIG_PACKAGE_luci-app-upnp=y
         CONFIG_PACKAGE_luci-app-vlmcsd=y
