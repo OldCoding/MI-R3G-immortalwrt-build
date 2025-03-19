@@ -150,6 +150,8 @@ jobs:
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client is not set
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server is not set
         CONFIG_PACKAGE_luci-app-smartdns=y
+        CONFIG_PACKAGE_luci-app-mosdns=y
+        CONFIG_PACKAGE_luci-app-turboacc=y
         CONFIG_PACKAGE_luci-app-ttyd=y
         CONFIG_PACKAGE_luci-app-passwall=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=y
