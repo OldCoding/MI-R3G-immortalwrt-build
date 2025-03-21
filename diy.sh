@@ -54,7 +54,11 @@ curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turbo
 
 # 个性化设置
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+sed -i "s/(\(luciversion || ''\))/(\1) + (' \/ Wing build $(TZ=UTC-8 date "+%Y.%m.%d") @')/g" $(find ./feeds/luci/modules/luci-mod-status/ -type f -name "10_system.js")
 sed -i 's/ImmortalWrt/MI-R3G/' package/base-files/files/bin/config_generate
+sed -i "s/key='.*'/key=123456789/g" ./package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+sed -i "s/country='.*'/country='CN'/g" ./package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+sed -i "s/encryption='.*'/encryption='sae-mixed'/g" ./package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 # DNS劫持
 sed -i '/dns_redirect/d' package/network/services/dnsmasq/files/dhcp.conf
 # adguardhome
