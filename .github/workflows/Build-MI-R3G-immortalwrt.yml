@@ -182,6 +182,7 @@ jobs:
         CONFIG_PACKAGE_iptables-mod-socket=y
         CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
         CONFIG_PACKAGE_iptables-mod-iprange=y
+        CONFIG_PACKAGE_smartdns-ui=y
         EOF
 
         # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
