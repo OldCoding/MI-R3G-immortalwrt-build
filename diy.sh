@@ -20,7 +20,6 @@ git clone https://github.com/sbwml/packages_lang_golang feeds/packages/lang/gola
 rm -rf ./feeds/luci/applications/luci-app-passwall
 rm -rf ./feeds/luci/applications/luci-app-filebrowser
 rm -rf ./feeds/luci/applications/luci-app-ssr-*
-rm -rf ./feeds/luci/applications/luci-app-smartdns
 rm -rf ./feeds/luci/applications/luci-app-argon-config
 rm -rf ./feeds/luci/themes/luci-theme-argon
 rm -rf ./feeds/luci/applications/luci-app-alist
@@ -28,7 +27,6 @@ rm -rf ./feeds/packages/net/alist
 rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/packages/net/xray-core
 
-git clone --depth 1 https://github.com/pymumu/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
 git clone --depth 1 https://github.com/pymumu/openwrt-smartdns feeds/packages/net/smartdns
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
