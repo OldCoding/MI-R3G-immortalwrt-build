@@ -24,10 +24,8 @@ rm -rf ./feeds/luci/applications/luci-app-argon-config
 rm -rf ./feeds/luci/themes/luci-theme-argon
 rm -rf ./feeds/luci/applications/luci-app-alist
 rm -rf ./feeds/packages/net/alist
-rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/packages/net/xray-core
 
-git clone --depth 1 https://github.com/pymumu/openwrt-smartdns feeds/packages/net/smartdns
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
