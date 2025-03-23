@@ -173,6 +173,8 @@ jobs:
 
         # 常用软件包:
         cat >> .config <<EOF
+        CONFIG_PACKAGE_automount=y
+        CONFIG_PACKAGE_autosamba=y
         CONFIG_PACKAGE_bind-host=y
         CONFIG_PACKAGE_ddns-scripts_aliyun=y
         CONFIG_PACKAGE_ddns-scripts-dnspod=y
