@@ -144,6 +144,7 @@ jobs:
         CONFIG_PACKAGE_luci-app-ddns=y
         CONFIG_PACKAGE_luci-app-diskman=y
         CONFIG_PACKAGE_luci-app-firewall=y
+        CONFIG_PACKAGE_luci-app-hd-idle=y
         CONFIG_PACKAGE_luci-app-ssr-plus=y
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client=y
@@ -182,9 +183,6 @@ jobs:
         CONFIG_PACKAGE_ddns-scripts-dnspod-com=y
         CONFIG_PACKAGE_default-settings-chn=y
         CONFIG_PACKAGE_kmod-sched-red=y
-        CONFIG_PACKAGE_iptables-mod-socket=y
-        CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
-        CONFIG_PACKAGE_iptables-mod-iprange=y
         CONFIG_PACKAGE_smartdns-ui=y
         EOF
 
