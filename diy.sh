@@ -35,8 +35,8 @@ git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages packa
 git clone --depth 1 https://github.com/fw876/helloworld package/helloworld
 git clone --depth 1 https://github.com/chenmozhijin/luci-app-adguardhome package/luci-app-adguardhome
 git clone --depth 1 https://github.com/OldCoding/luci-app-filebrowser package/luci-app-filebrowser
-git clone --depth 1 https://github.com/hudra0/luci-app-qosmate package/luci-app-qosmate
-git clone --depth 1 https://github.com/hudra0/qosmate package/qosmate
+#git clone --depth 1 https://github.com/hudra0/luci-app-qosmate package/luci-app-qosmate
+#git clone --depth 1 https://github.com/hudra0/qosmate package/qosmate
 svn_export "main" "luci-app-passwall" "package/luci-app-passwall" "https://github.com/xiaorouji/openwrt-passwall"
 svn_export "main" "luci-app-alist" "feeds/luci/applications/luci-app-alist" "https://github.com/sbwml/luci-app-alist"
 svn_export "main" "alist" "feeds/packages/net/alist" "https://github.com/sbwml/luci-app-alist"
