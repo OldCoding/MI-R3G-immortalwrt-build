@@ -143,6 +143,8 @@ jobs:
         CONFIG_PACKAGE_luci-app-autoreboot=y
         CONFIG_PACKAGE_luci-app-ddns=y
         CONFIG_PACKAGE_luci-app-diskman=y
+        CONFIG_PACKAGE_easytier=y
+        CONFIG_PACKAGE_luci-app-easytier=y
         CONFIG_PACKAGE_luci-app-firewall=y
         CONFIG_PACKAGE_luci-app-hd-idle=y
         CONFIG_PACKAGE_luci-app-ssr-plus=y
