@@ -32,7 +32,7 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/l
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
 git clone --depth 1 https://github.com/fw876/helloworld package/helloworld
 git clone --depth 1 https://github.com/sbwml/luci-app-openlist2 package/luci-app-openlist2
-git clone --depth 1 https://github.com/chenmozhijin/luci-app-adguardhome package/luci-app-adguardhome
+git clone --depth 1 https://github.com/sirpdboy/luci-app-adguardhome package/adguardhome
 git clone --depth 1 https://github.com/OldCoding/luci-app-filebrowser package/luci-app-filebrowser
 #git clone --depth 1 https://github.com/hudra0/luci-app-qosmate package/luci-app-qosmate
 #git clone --depth 1 https://github.com/hudra0/qosmate package/qosmate
@@ -42,6 +42,8 @@ svn_export "v5" "mosdns" "package/mosdns" "https://github.com/sbwml/luci-app-mos
 svn_export "v5" "v2dat" "package/v2dat" "https://github.com/sbwml/luci-app-mosdns"
 svn_export "main" "easytier" "package/easytier" "https://github.com/EasyTier/luci-app-easytier"
 svn_export "main" "luci-app-easytier" "package/luci-app-easytier" "https://github.com/EasyTier/luci-app-easytier"
+
+mv ./package/adguardhome/* ./package/ && rm -rf ./package/adguardhome
 
 # turboacc 补丁
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
@@ -59,9 +61,6 @@ sed -i "s/country='.*'/country='CN'/g" ./package/network/config/wifi-scripts/fil
 sed -i "s/encryption='.*'/encryption='sae-mixed'/g" ./package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 # DNS劫持
 sed -i '/dns_redirect/d' package/network/services/dnsmasq/files/dhcp.conf
-# adguardhome
-VER=$(grep PKG_VERSION package/luci-app-adguardhome/Makefile | sed 's/-/\./g')
-sed -i "s/PKG_VERSION:=.*/$VER/g" package/luci-app-adguardhome/Makefile
 cd package
 # 汉化
 curl -sfL -o ./convert_translation.sh https://github.com/kenzok8/small-package/raw/main/.github/diy/convert_translation.sh
