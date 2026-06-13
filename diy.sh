@@ -17,6 +17,7 @@ find ./ | grep Makefile | grep mosdns | xargs rm -f
 
 #rm -rf ./feeds/packages/lang/golang 
 #git clone https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+rm -rf ./feeds/luci/applications/luci-app-adguardhome
 rm -rf ./feeds/luci/applications/luci-app-passwall
 rm -rf ./feeds/luci/applications/luci-app-filebrowser
 rm -rf ./feeds/luci/applications/luci-app-ssr-*
