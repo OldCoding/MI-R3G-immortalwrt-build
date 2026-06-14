@@ -61,6 +61,7 @@ jobs:
         cd openwrt
         useVersionInfo=$(git show -s --date=short --format="Author: %an<br/>date: %cd<br/>commit: %s<br/>commit hash: %H<br/>")
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
+        sed -i "/video/d" feeds.conf.default
 
     - name: Cache
       uses: klever1988/cachewrtbuild@main
@@ -69,7 +70,7 @@ jobs:
         prefix: ${{ github.workspace }}/openwrt
 
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a && ./scripts/feeds install -a
+      run: cd openwrt && ./scripts/feeds update -a
 
     - name: File Diy Patch
       run: |
